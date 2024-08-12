@@ -6,6 +6,12 @@
     <title>Sum of Tripled Evens</title>
 </head>
 <body>
-    
+    <script>
+        let arr = [1, 4, 5, 8, 12, 15];
+        let sumTripledEvens = arr.filter(num => num % 2 === 0)
+                                .map(num => num * 3)
+                                .reduce((total, num) => total + num);
+        console.log(sumTripledEvens);
+    </script>
 </body>
 </html>
