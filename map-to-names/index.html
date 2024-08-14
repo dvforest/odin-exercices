@@ -13,13 +13,17 @@
 
         let users = [ john, pete, mary ];
 
+        // My own solution
         let names = getProp("name", users);
 
         function getProp(prop, arr){
             let props = [];
-            arr.forEach(obj => props.push(obj[prop]));
+            arr.forEach(item => props.push(item[prop]));
             return props;
         }
+
+        // Alternate solution, using map()
+        let names2 = users.map(item => item.name);
 
         alert( names ); // John, Pete, Mary
     </script>
