@@ -7,22 +7,31 @@
 </head>
 <body>
     <script>
-        let arr = [1, 2, 3];
 
         function shuffle(arr){
             arr.sort((a, b) => Math.random() - 0.5);
         }
 
-        // Randomly shuffle arr three times
-        shuffle(arr);
-        alert(arr);
+        // counts of appearances of all possible permutations
+        let count = {
+            "123": 0,
+            "132": 0,
+            "213": 0,
+            "231": 0,
+            "312": 0,
+            "321": 0
+        };
 
-        shuffle(arr);
-        alert(arr);
+        // run shuffle one million times and keep track of each result
+        for (let i = 0; i < 1000000; i++){
+            let arr = [1, 2, 3];
+            shuffle(arr);
+            count[arr.join("")]++;
+        }
 
-        shuffle(arr);
-        alert(arr);
-
+        // logging the results, we can confirm that the current method isn't perfectly random
+        console.log(count);
+        
     </script>
 </body>
 </html>
