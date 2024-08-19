@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindromes exercice</title>
+</head>
+<body>
+    <script>
+        function palindromes(str){
+            let condensed = str.toLowerCase()
+                                .replace(/[^\w]/g, "");
+            let reversed = condensed.split("")
+                            .toReversed()
+                            .join("");
+            return condensed === reversed;
+        }
+
+        console.log(palindromes("racecar") === true);
+        console.log(palindromes("racecar!") === true);
+        console.log(palindromes("Racecar!") === true);
+        console.log(palindromes("A car, a man, a maraca.") === true);
+        console.log(palindromes("Animal loots foliated detail of stool lamina.") === true);
+        console.log(palindromes("ZZZZ car, a man, a maracaz.") === false);
+        console.log(palindromes("rac3e3car") === true);
+        console.log(palindromes("r3ace3car") === false);
+    </script>
+</body>
+</html>
