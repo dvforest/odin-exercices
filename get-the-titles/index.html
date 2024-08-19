@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get the Titles Exercice</title>
+</head>
+<body>
+    <script>
+    const books = [
+    {
+        title: 'Book',
+        author: 'Name'
+    },
+    {
+        title: 'Book2',
+        author: 'Name2'
+    }
+    ]
+
+    function getTheTitles(array){
+        return array.map(item => item.title);
+    }
+
+    console.log(getTheTitles(books));
+    </script>
+</body>
+</html>
