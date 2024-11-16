@@ -1,9 +1,27 @@
+@font-face {
+  font-family: 'andadaregular';
+  src: url('fonts/andada-regular-webfont.woff2') format('woff2'),
+       url('fonts/andada-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'arbutus_slabregular';
+  src: url('fonts/arbutusslab-regular-webfont.woff2') format('woff2'),
+       url('fonts/arbutusslab-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 /* General setup */
 
 html {
   font-size: 10px;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'andadaregular', serif;
 }
 
 body {
@@ -16,10 +34,12 @@ body {
 
 h1 {
   font-size: 3.2rem;
+  font-family: 'arbutus_slabregular', serif;
 }
 
 h2 {
   font-size: 2.4rem;
+  font-family: 'arbutus_slabregular', serif;
 }
 
 p {
