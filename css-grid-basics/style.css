@@ -1,0 +1,9 @@
+.container {
+    display: grid;
+    grid-template: [first]100px [mid] 50px [end]/ [first] 50px [mid] 50px [end];
+    gap: 20px 20px;
+}
+
+.container > div {
+    border: 1px solid blue;
+}
