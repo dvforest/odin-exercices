@@ -16,12 +16,12 @@
 }
 
 #kitchen {
-    grid-column: 4 / 6;
+    grid-column: 2 / 4;
     grid-row: 3 / 6;
 }
 
 #bedroom {
-    grid-column: 2 / 4;
+    grid-column: 4 / 6;
     grid-row: 3 / 5;
 }
 
@@ -31,6 +31,6 @@
 }
 
 #closet {
-    grid-column: 2 / 4;
+    grid-column: 4 / 6;
     grid-row: 5 / 6;
 }
