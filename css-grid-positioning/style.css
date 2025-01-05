@@ -1,6 +1,5 @@
 .container{
     display: inline-grid;
-    grid-template: 40px 40px 40px 40px 40px /
-                   40px 40px 40px 40px 40px;
+    grid-template: repeat(5, 40px) / repeat(5, 40px);
     background-color: lightblue;
 }
