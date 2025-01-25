@@ -8,6 +8,14 @@
 <body>
 </body>
 <script>
-    
+    function createBookEntry(title, author, pages, read){
+        this.name = name;
+        this.pages = pages;
+        this.read = read;
+
+        this.info = function(){
+            return `${name} by ${author}, ${pages}, ${read}`;
+        }
+    }
 </script>
 </html>
