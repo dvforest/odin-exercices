@@ -8,14 +8,17 @@
 <body>
 </body>
 <script>
-    function createBookEntry(title, author, pages, read){
+    function BookEntry(title, author, pages, read){
         this.name = name;
         this.pages = pages;
         this.read = read;
 
         this.info = function(){
-            return `${name} by ${author}, ${pages}, ${read}`;
+            return `${name} by ${author}, ${pages} pages, ${read}`;
         }
     }
+
+    const Whisperwick = new BookEntry("Whisperwick", "Jordan Lee", "539", "read");
+    const Fablehaven = new BookEntry("Fablehaven", "Brandon Muil", "434", "not read yet");
 </script>
 </html>
