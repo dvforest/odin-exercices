@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Power</title>
+    <title>Factorial</title>
   </head>
   <body></body>
   <script>
-    function power(x, p) {
-      if (p === 0) {
+    function factorial(num) {
+      if (num === 1) {
         return 1;
       } else {
-        return (x *= power(x, p - 1));
+        return (num *= factorial(num - 1));
       }
     }
-    console.log(power(2, 4));
+    console.log(factorial(5));
   </script>
 </html>
