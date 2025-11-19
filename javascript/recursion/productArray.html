@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product of Array</title>
+  </head>
+  <body></body>
+  <script>
+    function productOfArray(array, index = 0) {
+      if (index === array.length) {
+        return 1;
+      }
+      return array[index] * productOfArray(array, index + 1);
+    }
+    console.log(productOfArray([1, 2, 3, 10]));
+  </script>
+</html>
