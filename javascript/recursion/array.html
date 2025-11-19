@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body></body>
+  <script>
+    const allAreLessThanSeven = all([1, 2, 9], function (num) {
+      return num < 7;
+    });
+
+    function all(array, callback, index = 0) {
+      if (index === array.length) return true;
+      if (!callback(array[index])) return false;
+      return all(array, callback, index + 1);
+    }
+
+    console.log(allAreLessThanSeven);
+  </script>
+</html>
