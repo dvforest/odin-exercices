@@ -9,5 +9,17 @@
 
   <script>
     var seven = totalIntegers([[[5], 3], 0, 2, ["foo"], [], [4, [5, 6]]]);
+    console.log(seven);
+
+    function totalIntegers(array, int = 0) {
+      for (let value of array) {
+        if (Number.isInteger(value)) {
+          int += 1;
+        } else if (Array.isArray(value)) {
+          int += totalIntegers(value);
+        }
+      }
+      return int;
+    }
   </script>
 </html>
