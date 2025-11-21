@@ -25,6 +25,21 @@
     let hasIt = contains(nestedObject, 44);
     let doesntHaveIt = contains(nestedObject, "foo");
 
-    function contains(obj, value) {}
+    console.log(hasIt);
+    console.log(doesntHaveIt);
+
+    function contains(obj, value) {
+      for (let key in obj) {
+        if (obj[key] === value) {
+          return true;
+        }
+        if (typeof obj[key] === "object" && obj[key] !== null) {
+          if (contains(obj[key], value)) {
+            return true;
+          }
+        }
+      }
+      return false;
+    }
   </script>
 </html>
