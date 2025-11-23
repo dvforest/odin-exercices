@@ -15,6 +15,27 @@
       }
     }
 
-    console.log(fibonacci(10));
+    function fibsArray(n, seq = []) {
+      if (n < 2) {
+        seq[n] = n;
+      } else {
+        seq[n] = fibsArray(n - 1, seq)[n - 1] + fibsArray(n - 2, seq)[n - 2];
+      }
+      return seq;
+    }
+
+    function fibsIterate(n) {
+      const seq = [];
+      for (let i = 0; i < n; i++) {
+        if (i < 2) {
+          seq.push(i);
+        } else {
+          seq.push(seq[i - 1] + seq[i - 2]);
+        }
+      }
+      return seq;
+    }
+
+    console.log(fibsArray(10));
   </script>
 </html>
