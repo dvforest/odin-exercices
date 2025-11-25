@@ -15,7 +15,28 @@
     console.log(mergeSort([105, 79, 100, 110])); // [79, 100, 105, 110]
 
     function mergeSort(array) {
-      return array;
+      if (array.length < 2) {
+        return array;
+      } else {
+        const half = array.length / 2;
+        const arrayLeft = array.slice(0, Math.floor(half));
+        const arrayRight = array.slice(Math.floor(half));
+
+        const sortedLeft = mergeSort(arrayLeft);
+        const sortedRight = mergeSort(arrayRight);
+
+        const mergedArray = [];
+
+        while (sortedLeft.length && sortedRight.length) {
+          // As long as both arrays have numbers, compare them and push the smallest
+          if (sortedRight[0] < sortedLeft[0]) {
+            mergedArray.push(sortedRight.shift());
+          } else {
+            mergedArray.push(sortedLeft.shift());
+          }
+        }
+        return mergedArray.concat(sortedLeft, sortedRight); // Append leftovers
+      }
     }
   </script>
 </html>
